@@ -7,7 +7,7 @@ package 'munin' do
 	action :install
 end
 
-service 'postfix' do:
+service 'postfix' do
 	action: start
 end
 
