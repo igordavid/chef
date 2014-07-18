@@ -16,13 +16,6 @@ service 'sendmail' do
 end
 
 
-#template "/etc/munin/munin-node.conf" do
-#	source "munin-node.conf.erb"
-#	mode 0644
-#	only_if {node['createfile']['install_file']}
-#	notifies :restart, resources(:service => 'munin-node')
-#end
-#
 cookbook_file "/etc/munin/munin-node.conf" do
 	source "munin-node.conf"
 	mode 0644
