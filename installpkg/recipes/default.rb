@@ -26,7 +26,7 @@ end
 cookbook_file "/etc/munin/munin-node.conf" do
 	source "munin-node.conf"
 	mode 0644
-	action :create_if_missing
+	action :create
 end
 
 service 'munin-node' do
