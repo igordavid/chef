@@ -2,7 +2,7 @@
 #
 
 template "/tmp/cwlogs.cfg" do
-  cookbook "logs"
+  cookbook "cloudwatchlogs"
   source "cwlogs.cfg.erb"
   owner "root"
   group "root"
