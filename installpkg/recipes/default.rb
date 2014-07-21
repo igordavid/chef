@@ -15,6 +15,9 @@ service 'sendmail' do
 	action :stop
 end
 
+service 'munin-node' do
+        action :start
+end
 
 cookbook_file "/etc/munin/munin-node.conf" do
 	source "munin-node.conf"
@@ -23,6 +26,3 @@ cookbook_file "/etc/munin/munin-node.conf" do
 	notifies :restart, resources(:services => 'munin-node')
 end
 
-service 'munin-node' do
-        action :start
-end
