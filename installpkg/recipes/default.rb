@@ -19,7 +19,8 @@ end
 cookbook_file "/etc/munin/munin-node.conf" do
 	source "munin-node.conf"
 	mode 0644
-	action :create
+#	action :create
+	notifies :restart, resources(:services => 'munin-node')
 end
 
 service 'munin-node' do
