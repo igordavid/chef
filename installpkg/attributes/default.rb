@@ -1,2 +1,3 @@
 #for setting up cloudwatch logs
-default[:cwlogs][:logfile] = '/var/log/httpd/igordnet-access.log'
+default[:cwlogs][:logfile] = '/var/log/aws/opsworks/opsworks-agent.log'
+
