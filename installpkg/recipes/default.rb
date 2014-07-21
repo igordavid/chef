@@ -16,7 +16,7 @@ service 'sendmail' do
 end
 
 service 'munin-node' do
-        action :start, :enable
+        action :enable
 end
 
 cookbook_file "/etc/munin/munin-node.conf" do
