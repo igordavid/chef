@@ -16,13 +16,13 @@ service 'sendmail' do
 end
 
 service 'munin-node' do
-        action :start
+        action :start, :enable
 end
 
 cookbook_file "/etc/munin/munin-node.conf" do
 	source "munin-node.conf"
 	mode 0644
 #	action :create
-	notifies :restart, resources(:services => 'munin-node')
+	notifies :restart, resources(:service => 'munin-node')
 end
 
