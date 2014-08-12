@@ -16,7 +16,7 @@ ruby_block "identify" do
 MESSAGE_END
 
 		Net::SMTP.start('localhost') do |smtp|
-		smtp.send_message message, 	'root@#{HOST}',
+		smtp.send_message message, 	"root@#{HOST}",
 						'igord@bra.in.rs'
 		end
 	end
