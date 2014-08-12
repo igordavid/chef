@@ -12,11 +12,11 @@ ruby_block "identify" do
 		Layer: #{node['platform']} 
 		AWS InstanceID: #{node['platform']}
 		AWS AZ: #{node['platform']}	
-		
-		MESSAGE_END
+MESSAGE_END
 
 		Net::SMTP.start('localhost') do |smtp|
-		smtp.send_message message, 'igord@bra.in.rs'
+		smtp.send_message message, 	'root@#{node['hostname']}'
+						'igord@bra.in.rs'
 		end
 	end
 	action :run
